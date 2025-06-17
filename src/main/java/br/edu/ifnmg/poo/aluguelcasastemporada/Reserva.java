@@ -34,6 +34,12 @@ public class Reserva {
     private int hospedes;
     private char estado;
 
+    //<editor-fold defaultstate="collapsed" desc="Constructor">
+    public Reserva() {
+        estado = 'P';
+    }
+    //</editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
     public String getPropriedade() {
         return propriedade;
