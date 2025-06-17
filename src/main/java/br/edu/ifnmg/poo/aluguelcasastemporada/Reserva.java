@@ -139,6 +139,11 @@ public class Reserva {
     public boolean isDisponivel(LocalDate entrada, LocalDate saida) {
         return saida.isBefore(this.entrada) || entrada.isAfter(this.saida);
     }
+    
+    public int calcularPeriodoEstadia() {
+        // 1 noite = 2 dias
+        return (int) entrada.until(saida, ChronoUnit.DAYS) + 1;
+    }
 
     //<editor-fold defaultstate="collapsed" desc="toString">
     @Override
