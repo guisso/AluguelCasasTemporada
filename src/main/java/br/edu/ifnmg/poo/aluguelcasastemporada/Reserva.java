@@ -16,10 +16,94 @@
  */
 package br.edu.ifnmg.poo.aluguelcasastemporada;
 
+import java.time.LocalDate;
+
 /**
  * Controle das reservas do sistema de gestão de aluguéis de temporada
+ *
  * @author Luis Guisso &lt;luis dot guisso at ifnmg dot edu dot br&gt;
  */
 public class Reserva {
-    
+
+    private String propriedade;
+    private String hospede;
+    private LocalDate entrada;
+    private LocalDate saida;
+    private int limiteHospedes;
+    private int hospedes;
+    private char estado;
+
+    //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
+    public String getPropriedade() {
+        return propriedade;
+    }
+
+    public void setPropriedade(String propriedade) {
+        this.propriedade = propriedade;
+    }
+
+    public String getHospede() {
+        return hospede;
+    }
+
+    public void setHospede(String hospede) {
+        this.hospede = hospede;
+    }
+
+    public LocalDate getEntrada() {
+        return entrada;
+    }
+
+    public void setEntrada(LocalDate entrada) {
+        this.entrada = entrada;
+    }
+
+    public LocalDate getSaida() {
+        return saida;
+    }
+
+    public void setSaida(LocalDate saida) {
+        this.saida = saida;
+    }
+
+    public int getLimiteHospedes() {
+        return limiteHospedes;
+    }
+
+    public void setLimiteHospedes(int limiteHospedes) {
+        this.limiteHospedes = limiteHospedes;
+    }
+
+    public int getHospedes() {
+        return hospedes;
+    }
+
+    public void setHospedes(int hospedes) {
+        this.hospedes = hospedes;
+    }
+
+    public char getEstado() {
+        return estado;
+    }
+
+    public void setEstado(char estado) {
+        this.estado = estado;
+    }
+    //</editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc="toString">
+    @Override
+    public String toString() {
+        return "Reserva{"
+                + "propriedade=" + propriedade
+                + ", hospede=" + hospede
+                + ", entrada=" + entrada
+                + ", saida=" + saida
+                + ", limiteHospedes=" + limiteHospedes
+                + ", hospedes=" + hospedes
+                + ", estado=" + estado
+                + '}';
+    }
+    //</editor-fold>
+
 }
