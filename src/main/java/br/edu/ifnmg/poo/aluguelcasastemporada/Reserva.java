@@ -115,6 +115,9 @@ public class Reserva {
     }
 
     public void setEstado(char estado) {
+        if (estado != 'P' || estado != 'C' || estado != 'X') {
+            return;
+        }
         this.estado = estado;
     }
     //</editor-fold>
