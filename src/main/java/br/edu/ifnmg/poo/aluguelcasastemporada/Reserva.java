@@ -98,6 +98,9 @@ public class Reserva {
     }
 
     public void setHospedes(int hospedes) {
+        if (hospedes > limiteHospedes) {
+            return;
+        }
         this.hospedes = hospedes;
     }
 
