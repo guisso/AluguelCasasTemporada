@@ -63,6 +63,9 @@ public class Reserva {
     }
 
     public void setEntrada(LocalDate entrada) {
+        if (entrada == null || entrada.isBefore(LocalDate.now())) {
+            return;
+        }
         this.entrada = entrada;
     }
 
