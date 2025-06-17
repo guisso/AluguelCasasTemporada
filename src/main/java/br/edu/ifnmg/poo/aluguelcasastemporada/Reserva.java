@@ -144,6 +144,10 @@ public class Reserva {
         // 1 noite = 2 dias
         return (int) entrada.until(saida, ChronoUnit.DAYS) + 1;
     }
+    
+    public void atualizarEstado() {
+        estado = estado == 'P' ? 'C' : estado == 'C' ? 'X' : 'P';
+    }
 
     //<editor-fold defaultstate="collapsed" desc="toString">
     @Override
