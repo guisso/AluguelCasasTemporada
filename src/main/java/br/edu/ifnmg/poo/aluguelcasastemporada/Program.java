@@ -16,6 +16,8 @@
  */
 package br.edu.ifnmg.poo.aluguelcasastemporada;
 
+import java.time.LocalDate;
+
 /**
  * Execução de testes sobre a classe Reserva
  *
@@ -24,6 +26,17 @@ package br.edu.ifnmg.poo.aluguelcasastemporada;
 public class Program {
 
     public static void main(String[] args) {
-        
+        Reserva r = new Reserva();
+        System.out.println(">> " + r);
+
+        r.setPropriedade("Linda casa de campo com vista para a montanha");
+        r.setHospede("Ana Zaira");
+        r.setEntrada(LocalDate.now().plusDays(2));
+        r.setSaida(LocalDate.now().plusDays(25));
+        r.setLimiteHospedes(3);
+        r.setHospedes(2);
+        r.atualizarEstado();
+
+        System.out.println(">> " + r);
     }
 }
