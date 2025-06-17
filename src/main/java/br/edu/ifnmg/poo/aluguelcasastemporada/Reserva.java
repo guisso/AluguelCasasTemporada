@@ -51,6 +51,10 @@ public class Reserva {
     }
 
     public void setHospede(String hospede) {
+        if (hospede == null || hospede.isBlank()
+                || hospede.length() > 45) {
+            return;
+        }
         this.hospede = hospede;
     }
 
