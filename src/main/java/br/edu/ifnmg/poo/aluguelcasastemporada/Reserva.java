@@ -122,6 +122,24 @@ public class Reserva {
     }
     //</editor-fold>
 
+    /**
+     * Verifica a disponibilidade da reserva em relação à reserva atual
+     * 
+     * >>>>>>E---------S>>>>>>>>> //
+     *   E'xxxxxxxS'              //
+     *            E'xxxxxxxxxS'   //
+     *        E'xxxxxS'           //
+     *   E'xxxxxxxxxxxxxxxxxxS'   //
+     *
+     * @param entrada Data de entrada no imóvel alugado
+     * @param saida Data de saída do imóvel alugado
+     * @return Disponibilidade do período apresentado em relação 
+     * ao período atualmente reservado
+     */
+    public boolean isDisponivel(LocalDate entrada, LocalDate saida) {
+        return saida.isBefore(this.entrada) || entrada.isAfter(this.saida);
+    }
+
     //<editor-fold defaultstate="collapsed" desc="toString">
     @Override
     public String toString() {
