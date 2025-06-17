@@ -17,6 +17,7 @@
 package br.edu.ifnmg.poo.aluguelcasastemporada;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 /**
  * Controle das reservas do sistema de gestão de aluguéis de temporada
@@ -74,6 +75,10 @@ public class Reserva {
     }
 
     public void setSaida(LocalDate saida) {
+        if (saida == null || !saida.isAfter(entrada)
+                || entrada.until(saida, ChronoUnit.DAYS) > 30) {
+            return;
+        }
         this.saida = saida;
     }
 
