@@ -39,6 +39,10 @@ public class Reserva {
     }
 
     public void setPropriedade(String propriedade) {
+        if (propriedade == null || propriedade.isBlank()
+                || propriedade.length() > 150) {
+            return;
+        }
         this.propriedade = propriedade;
     }
 
